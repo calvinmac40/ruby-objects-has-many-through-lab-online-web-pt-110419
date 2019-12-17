@@ -19,7 +19,7 @@ class Doctor
     Appointment.all{|appointments| appointments.doctor == appointments.doctor}
   end
   
-  def new_appointment(date,patient)
-    new_appointment = Appointment.new(date,self,patient)
+  def new_appointment(doctor,patient)
+    new_appointment = Appointment.new(doctor,self,patient)
   end
 end
