@@ -11,7 +11,7 @@ describe 'Patient' do
     it 'given a doctor and date, creates a new appointment belonging to that patient' do
       doctor_who = Doctor.new('The Doctor')
       hevydevy = Patient.new('Devin Townsend')
-      appointment = hevydevy.new_appointment(doctor_who, 'Friday, January 32nd')
+      appointment = hevydevy.new_appointment(doctor_who, 'Friday, January 26th')
 
       expect(hevydevy.appointments).to include(appointment)
       expect(appointment.patient).to eq(hevydevy)
@@ -34,7 +34,7 @@ describe 'Patient' do
       doctor_smith = Doctor.new('Matt Smith')
       steve = Patient.new('Steve')
       mike = Patient.new('Mike')
-      appointment = Appointment.new('Friday, January 32nd', steve, doctor_who)
+      appointment = Appointment.new('Friday, January 26th', steve, doctor_who)
       appointment_2 = Appointment.new('Saturday, January 33rd', steve, doctor_smith)
       appointment_3 = Appointment.new('Sunday, January 34th', mike, doctor_who)
 
@@ -50,7 +50,7 @@ describe 'Patient' do
       doctor_who = Doctor.new('The Doctor')
       doctor_what = Doctor.new('Das Doktor')
       hevydevy = Patient.new('Devin Townsend')
-      hevydevy.new_appointment(doctor_who, 'Friday, January 32nd')
+      hevydevy.new_appointment(doctor_who, 'Friday, January 26th')
       hevydevy.new_appointment(doctor_what, 'Saturday, January 32nd')
 
       expect(hevydevy.doctors).to include(doctor_who)
