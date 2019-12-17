@@ -1,24 +1,4 @@
-# class Patient
-  
-#   attr_accessor :name 
-  
-#   @@all = []
-  
-#   def initialize(name)
-#     @name = name
-#     @@all << self
-#   end
-  
-#   def self.all
-#     @@all 
-#   end
-  
-  
-#   def appointments
-#     Appointment.all.select{|appointments| appointment.doctor == appointments.doctor }
-#   end
-#   end
-# end
+require 'pry'
 
 class Patient
   attr_reader :name
@@ -32,6 +12,7 @@ class Patient
   
   def new_appointment(doctor,date)
     patient = Appointment.new(doctor,self,date)
+    binding.pry
   end
   
   def self.all
@@ -47,8 +28,4 @@ class Patient
       doctors.appointments
     end
   end
-  
-  # def doctors
-  #   appointments.map(&:doctors) The code that didn't work that was given to me from a tech!
-  # end
 end
