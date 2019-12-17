@@ -18,5 +18,9 @@ class Patient
     Appointment.all.select{|appointments| appointments.doctor == appointments.doctor }
   end
   
-  
+  def doctors
+    Doctor.all.each do |doctors|
+      doctors.appointments
+    end
+  end
 end
