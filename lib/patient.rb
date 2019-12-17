@@ -17,4 +17,6 @@ class Patient
   def appointments
     Appointment.all.select{|appointments| appointments.doctor == appointments.doctor }
   end
+  
+  
 end
