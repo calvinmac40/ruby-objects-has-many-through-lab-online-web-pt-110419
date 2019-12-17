@@ -23,7 +23,5 @@ class Doctor
     new_appointment = Appointment.new(patient,date,self)
   end
   
-  def patients
-    Appointment.all.select{|appointments| appointments.doctor == self}
-  end
+ 
 end
